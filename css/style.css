@@ -355,7 +355,7 @@ img, canvas { display: block; }
 }
 
 .block + .block {
-  border-top: 1px solid rgba(232, 232, 236, 0.04);
+  border-top: none;
 }
 
 .statement {
@@ -378,6 +378,14 @@ img, canvas { display: block; }
 
 .offset-right {
   margin-left: auto;
+}
+
+.offset-right.aside {
+  text-align: justify;
+}
+
+.offset-right.statement,
+.offset-right.feature-link {
   text-align: right;
 }
 
@@ -517,7 +525,7 @@ img, canvas { display: block; }
 
 /* ---------- Footer ---------- */
 .footer {
-  border-top: 1px solid rgba(232, 232, 236, 0.06);
+  border-top: none;
   padding: 32px 0;
   position: relative;
   z-index: 1;
