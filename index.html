@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>miji sees me.</title>
+  <meta name="description" content="Check in with yourself in three seconds. Track how you feel over time. Share your emotional day with the people who matter.">
+  <meta name="theme-color" content="#08080F">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta property="og:title" content="miji sees me.">
+  <meta property="og:description" content="Check in with yourself in three seconds. Track how you feel over time.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://miji.one">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <canvas id="nav-orb" width="36" height="36"></canvas>
+        <span class="nav-label">miji</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#" data-page="home">home</a></li>
+        <li><a href="#" data-page="face-read">reading you</a></li>
+        <li><a href="#" data-page="connections">your people</a></li>
+        <li><a href="#" data-page="journal">your words</a></li>
+        <li><a href="#" data-page="your-score">scoring</a></li>
+      </ul>
+      <a href="mailto:founder@co3.one?subject=miji%20Waitlist" class="nav-cta">join the waitlist</a>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ====== PAGE: HOME ====== -->
+  <div class="page active" id="page-home">
+
+    <section class="hero">
+      <div class="hero-rest" id="hero-rest">
+        <div class="hero-orb-wrap">
+          <canvas id="hero-orb"></canvas>
+        </div>
+      </div>
+      <div class="hero-intro" id="hero-intro">
+        <h1 id="tagline"><span class="line1">hi,</span><span class="line2">i'm miji.</span></h1>
+      </div>
+      <div class="hero-rest-below" id="hero-rest-below">
+        <p>Check in with yourself in three seconds. See how you really feel, track it over time, and share your day with the people who matter.</p>
+        <div class="hero-actions">
+          <a href="mailto:founder@co3.one?subject=miji%20Waitlist" class="btn btn-gold">join the waitlist</a>
+          <a href="#" data-page="face-read" class="btn btn-ghost">see how it works</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Feature 1: Face Read -->
+    <div class="block">
+      <div class="wrap">
+        <p class="statement fade-in">
+          i can tell how you're doing.
+        </p>
+        <p class="aside fade-in">
+          Open the app and your camera catches your expression instantly. No check-in screens, no mood wheels, no typing required. Within three seconds you get a reflection of how you actually feel right now. Sometimes it catches things you haven't noticed yet. That first look is the entire starting point.
+        </p>
+        <p class="feature-link fade-in"><a href="#" data-page="face-read">Learn more about reading</a></p>
+      </div>
+    </div>
+
+    <!-- Feature 2: Connections -->
+    <div class="block">
+      <div class="wrap">
+        <p class="statement offset-right fade-in">
+          what lights you up?
+        </p>
+        <p class="aside offset-right fade-in">
+          After certain calls, hangouts, or even texts, your score shifts. miji tracks those patterns over time so you can see which people bring out your best and which ones don't. You can share your daily card with friends who are also on miji. It becomes a way to check in on each other without having to explain everything. The people who matter get to see how your day actually went.
+        </p>
+        <p class="feature-link offset-right fade-in"><a href="#" data-page="connections">Learn more about people</a></p>
+      </div>
+    </div>
+
+    <!-- Feature 3: Journal -->
+    <div class="block">
+      <div class="wrap">
+        <p class="statement fade-in">
+          i'm a great listener.
+        </p>
+        <p class="aside fade-in">
+          Just speak and your words appear in real time. Tap any phrase to edit it. The prompts come from what's actually happening in your expression and voice right now, not from a template. At the end of each session, five gold words surface from what you said. They're yours to keep, to revisit, or to share.
+        </p>
+        <p class="feature-link fade-in"><a href="#" data-page="journal">Learn more about words</a></p>
+      </div>
+    </div>
+
+    <!-- Feature 4: Your Score -->
+    <div class="block">
+      <div class="wrap">
+        <p class="statement offset-right fade-in">
+          and i'll keep score so you don't have to.
+        </p>
+        <p class="aside offset-right fade-in">
+          Every day you get one number that captures how grounded you feel, the quality of your connections, and your trend over the past week. It's built from your own baseline, not anyone else's. Some days it climbs. Some days it drops. Over weeks and months, the pattern becomes something you can actually use to understand yourself.
+        </p>
+        <p class="feature-link offset-right fade-in"><a href="#" data-page="your-score">Learn more about scoring</a></p>
+      </div>
+    </div>
+
+    <!-- Feature 5: Privacy -->
+    <div class="block">
+      <div class="wrap">
+        <p class="statement fade-in">
+          i'm local. always.
+        </p>
+        <p class="aside fade-in">
+          Everything runs on your device. Your face, your voice, your patterns. Nothing leaves unless you choose to share it, and you see exactly what goes before it goes. Every permission is a separate toggle you control. Your data belongs to you, full stop.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <div class="wrap fade-in">
+        <p class="statement" style="text-align: center; margin: 0 auto 20px;">great meeting you! talk soon.</p>
+        <p class="aside" style="text-align: center; margin: 0 auto 44px;">Join our waitlist today, and we'll let you know when your miji is ready!</p>
+        <a href="mailto:founder@co3.one?subject=miji%20Waitlist" class="btn btn-gold">join the waitlist</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ====== PAGE: FACE READ (extended) ====== -->
+  <div class="page" id="page-face-read">
+
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="statement fade-in">
+          reading you
+        </p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="wrap">
+
+        <h3 class="item-title fade-in">three-second check-in</h3>
+        <p class="aside fade-in">
+          The moment the app opens, the front camera activates and the perception engine begins reading facial micro-expressions in real time. Subtle shifts around the brow, the corners of the mouth, and the muscles around the eyes are mapped against a running emotional baseline unique to each user. The entire process takes roughly three seconds from launch to reflection. No buttons, no prompts, no interaction required. The result is a single emotional snapshot that serves as the entry point for everything else in the app.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">what it reads</h3>
+        <p class="aside fade-in">
+          The engine tracks forty-two facial landmarks across six primary expression zones. It measures both the static position of each feature and its rate of change over the reading window. Composite signals like tension gradients and bilateral symmetry are weighted into the final assessment. The system adapts its sensitivity to each user over time, accounting for natural resting expressions and individual variation. All of this runs through a lightweight on-device model with no cloud dependency.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">your baseline, not theirs</h3>
+        <p class="aside fade-in">
+          Every reading is compared against the user's own historical data, not a population average. This means the face read becomes more accurate and more personal the longer someone uses it. A slight brow furrow might be unremarkable for one person and a significant shift for another. The system learns that distinction. There are no normative benchmarks and no comparison to anyone else.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">privacy by design</h3>
+        <p class="aside fade-in">
+          Raw camera data never leaves the device. The perception engine processes the video feed locally, extracts the relevant landmarks, and discards the raw frames immediately. Only derived emotional scores are retained. The camera permission is a standalone toggle that can be revoked at any time without affecting other features. No facial geometry, no images, and no biometric identifiers are ever transmitted or stored outside the phone.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ====== PAGE: YOUR SCORE (extended) ====== -->
+  <div class="page" id="page-your-score">
+
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="statement fade-in">
+          your score
+        </p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="wrap">
+
+        <div class="score-moment fade-in">
+          <div class="score-card">
+            <div class="score-num">72</div>
+            <div class="score-label">miji score</div>
+          </div>
+          <div class="score-text">
+            <p class="aside">A single daily number built from three pillars, measured entirely against the user's own history. No population benchmarks, no comparison, no ranking.</p>
+            <div style="margin-top: 28px;">
+              <div class="pillar-line">
+                <div class="dot"></div>
+                <span class="name">groundedness</span>
+                <span class="desc">How centered versus reactive you are today.</span>
+              </div>
+              <div class="pillar-line">
+                <div class="dot"></div>
+                <span class="name">connection</span>
+                <span class="desc">Quality of social and emotional interactions.</span>
+              </div>
+              <div class="pillar-line">
+                <div class="dot"></div>
+                <span class="name">trajectory</span>
+                <span class="desc">Directional trend over the past seven days.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">how it's calculated</h3>
+        <p class="aside fade-in">
+          The score is a weighted composite of three pillars: groundedness, connection quality, and seven-day trajectory. Each pillar draws from different data sources within the app, including face read results, journal sentiment, and interaction patterns. The weighting adjusts dynamically based on which data streams have the most signal for a given user on a given day. If someone skips the journal for a week, the score leans more heavily on face read and interaction data. The system never penalizes missing inputs.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">personal baseline</h3>
+        <p class="aside fade-in">
+          The score is always relative to the user's own historical range. A 72 for one person might represent a strong recovery week, while the same number for someone else might signal a slow decline. The baseline recalibrates continuously using a rolling window of the last sixty days. Sudden life changes like travel, illness, or major events are weighted differently to avoid distorting the trend. The goal is a number that feels honest, not one that feels good.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">share cards</h3>
+        <p class="aside fade-in">
+          Each day generates a unique share card with the score, a color gradient reflecting the day's emotional arc, and one observation line. No two cards look the same because no two days feel the same. Users can share cards directly with friends on miji or save them privately. The visual language is intentionally abstract so it communicates feeling without exposing specifics. Over time, a saved collection becomes a visual diary of how your weeks and months actually felt.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">what the score is not</h3>
+        <p class="aside fade-in">
+          The miji score is not a mental health diagnosis, a clinical measurement, or a ranking system. It does not compare users to each other or to any external standard. It is not designed to replace professional support or therapeutic assessment. The score is a personal reflection tool that helps users notice patterns in their own emotional landscape. It is most useful as a daily touchpoint and a long-term record, not as a definitive verdict on any single day.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ====== PAGE: CONNECTIONS (extended) ====== -->
+  <div class="page" id="page-connections">
+
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="statement fade-in">
+          your people
+        </p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="wrap">
+
+        <h3 class="item-title fade-in">relationship patterns</h3>
+        <p class="aside fade-in">
+          miji tracks how the user's emotional baseline shifts in proximity to specific people and interactions. A call with a particular friend might consistently correlate with a score lift, while a recurring meeting might reliably precede a dip. These patterns are surfaced over weeks and months, not from any single data point. The system never labels relationships as good or bad. It presents the data and lets the user draw their own conclusions.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">sharing your day</h3>
+        <p class="aside fade-in">
+          Users can share their daily card with anyone else on miji. The card shows the score, the color gradient, and an observation line, but it does not expose journal content, raw readings, or specific triggers. Recipients see how the sender's day felt at a glance without needing a long conversation. It is designed for the kind of check-in that happens between close friends, partners, and family. Sharing is always opt-in, always one card at a time, and always revocable.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">mutual visibility</h3>
+        <p class="aside fade-in">
+          When two users both share with each other, miji can surface connection-specific insights. Overlapping patterns become visible: days you both felt elevated, or stretches where one person's trajectory diverged from the other's. This is not surveillance or monitoring. Both users must actively opt in, and either person can revoke access at any time without notification. The feature is built for relationships where both people genuinely want to understand each other better.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">friend groups</h3>
+        <p class="aside fade-in">
+          Small groups of miji users can form a shared circle where everyone's daily card appears in a single feed. The feed shows the day's color and score for each member. No journal content, no specifics, no comments. It is designed to feel like a quiet room where everyone's presence is visible but nobody is forced to speak. Groups are capped at twelve people to keep the signal meaningful.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">what stays private</h3>
+        <p class="aside fade-in">
+          Journal entries, face read data, voice recordings, and individual pillar breakdowns are never shared. Only the composite score, the daily color, and the single observation line are visible to anyone outside the user's own view. There is no activity feed, no notifications when someone's score drops, and no system-generated prompts to reach out. The boundary between personal data and shared data is clear, fixed, and controlled entirely by the user.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ====== PAGE: JOURNAL (extended) ====== -->
+  <div class="page" id="page-journal">
+
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="statement fade-in">
+          your words
+        </p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="wrap">
+
+        <h3 class="item-title fade-in">voice-first input</h3>
+        <p class="aside fade-in">
+          The journal is built around speaking, not typing. Users talk naturally and their words appear as live transcription. Any phrase can be tapped to edit, delete, or expand on. The transcription engine runs on-device with no cloud processing of audio. This design choice exists because voice carries emotional data that typing does not, and the perception engine uses that signal to shape what happens next.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">contextual prompts</h3>
+        <p class="aside fade-in">
+          Journal prompts are not pulled from a static library. They are generated from what the perception engine observes during the session: a tightened voice around a certain topic, a trailing sentence, a shift in cadence, or a facial expression that contradicts the words being spoken. The prompts are gentle and open-ended, never leading or prescriptive. If the user ignores a prompt, it does not reappear. The system follows the user's lead, not the other way around.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">gold words</h3>
+        <p class="aside fade-in">
+          At the close of each journal session, the five highest-weighted context words are displayed in gold. These are the words the perception engine identified as carrying the most emotional significance during the session. Users see exactly which words are selected before anything leaves the device. Gold words are the only journal-derived data that contribute to the anonymous aggregate. They become small markers across weeks and months that trace the themes running through someone's life.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">session history</h3>
+        <p class="aside fade-in">
+          Free users can access one journal session per day. Members get unlimited sessions with full history and search. Past entries are stored entirely on-device and can be browsed by date, by gold word, or by score range. The search function lets users find every session where a specific word or theme surfaced. Over months of use, the journal becomes a searchable emotional record that no other app or notebook can replicate.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">what the journal does not do</h3>
+        <p class="aside fade-in">
+          The journal does not analyze, interpret, or diagnose. It does not offer advice, coping strategies, or therapeutic interventions. It does not generate summaries or rewrite what the user said. The role of the journal is to hold space: receive what someone says, surface the signal within it, and keep a faithful record. That restraint is intentional. The journal is a mirror, not a therapist.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ====== PAGE: PRIVACY ====== -->
+  <div class="page" id="page-privacy">
+
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="statement fade-in">
+          privacy policy
+        </p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="wrap">
+
+        <h3 class="item-title fade-in">overview</h3>
+        <p class="aside fade-in">
+          miji is built by CO3 ONE. This policy describes how we handle your information when you use our application and website. We designed miji around a core principle: your personal data stays on your device unless you explicitly choose to share it. We do not sell, rent, or trade your personal information to third parties for any reason.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">data we collect</h3>
+        <p class="aside fade-in">
+          When you use miji, the application processes facial expression data, voice input, and journal entries entirely on your device. None of this data is transmitted to our servers. We collect only the minimum information necessary to operate the service: your email address when you join the waitlist, anonymous usage analytics such as session frequency and feature engagement, and crash reports that contain no personal content. We do not collect or store biometric data, facial geometry, voice recordings, or journal text on any server.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">on-device processing</h3>
+        <p class="aside fade-in">
+          All perception, scoring, and journaling features run locally on your device using on-device machine learning models. Camera and microphone data is processed in real time and discarded immediately after analysis. Only derived scores and metadata are retained on your device. This architecture means that even we cannot access your personal emotional data because it never reaches our infrastructure.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">sharing and connections</h3>
+        <p class="aside fade-in">
+          When you choose to share your daily card with another miji user, only your composite score, color gradient, and observation line are transmitted. Journal entries, face read data, voice recordings, and pillar breakdowns are never included in shared content. You control every sharing action individually. You can revoke sharing permissions at any time without the other party being notified. Shared data is encrypted in transit and at rest.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">third parties</h3>
+        <p class="aside fade-in">
+          We do not share your personal data with advertisers, data brokers, or any third party for marketing purposes. We may use third-party infrastructure providers for hosting and analytics, and these providers are contractually bound to process data only as we direct and to maintain appropriate security measures. We will disclose information if required by law, but we will notify you unless legally prohibited from doing so.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">your rights</h3>
+        <p class="aside fade-in">
+          You can export all of your on-device data at any time through the app settings. You can delete your account and all associated data from our servers by contacting us. Since the majority of your data exists only on your device, deleting the app removes that data permanently. We respond to all data access and deletion requests within thirty days. If you have questions about your data or this policy, contact us at founder@co3.one.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">changes to this policy</h3>
+        <p class="aside fade-in">
+          We may update this privacy policy from time to time. When we make material changes, we will notify you through the app or by email before the changes take effect. Your continued use of miji after changes are posted constitutes acceptance of the updated policy. This policy was last updated in March 2026.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ====== PAGE: TERMS ====== -->
+  <div class="page" id="page-terms">
+
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="statement fade-in">
+          terms of service
+        </p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="wrap">
+
+        <h3 class="item-title fade-in">acceptance</h3>
+        <p class="aside fade-in">
+          By accessing or using miji, you agree to be bound by these terms of service. If you do not agree, you may not use the application or website. These terms constitute a legal agreement between you and CO3 ONE. You must be at least thirteen years of age to use miji. If you are under eighteen, you represent that a parent or guardian has reviewed and agreed to these terms on your behalf.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">the service</h3>
+        <p class="aside fade-in">
+          miji is a personal emotional awareness application that uses on-device perception to help you understand your emotional patterns over time. The service includes facial expression analysis, voice-based journaling, scoring, and optional social sharing features. miji is not a medical device, therapeutic tool, or clinical diagnostic instrument. It is not intended to diagnose, treat, cure, or prevent any medical or psychological condition. You should not rely on miji as a substitute for professional medical or mental health advice.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">your account</h3>
+        <p class="aside fade-in">
+          You are responsible for maintaining the security of your device and account. You agree not to share your account credentials with others. You are responsible for all activity that occurs under your account. If you believe your account has been compromised, contact us immediately at founder@co3.one. We reserve the right to suspend or terminate accounts that violate these terms.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">your data</h3>
+        <p class="aside fade-in">
+          You retain full ownership of all data generated through your use of miji. We do not claim any intellectual property rights over your journal entries, scores, or personal data. When you share content with other users through miji's sharing features, you grant those users a limited, revocable right to view that content within the application. You can revoke this permission at any time. Our handling of your data is governed by our privacy policy.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">acceptable use</h3>
+        <p class="aside fade-in">
+          You agree to use miji only for its intended purpose as a personal emotional awareness tool. You may not attempt to reverse engineer, decompile, or extract source code from the application. You may not use miji to harass, monitor, or surveil other users. You may not use automated systems to access the service. You may not misrepresent your identity or impersonate another person.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">limitation of liability</h3>
+        <p class="aside fade-in">
+          miji is provided on an as-is and as-available basis. We make no warranties, express or implied, regarding the accuracy, reliability, or completeness of the service. To the maximum extent permitted by law, CO3 ONE shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the service. Our total liability shall not exceed the amount you paid for the service in the twelve months preceding the claim.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 class="item-title fade-in">changes to terms</h3>
+        <p class="aside fade-in">
+          We may modify these terms at any time. When we make material changes, we will provide notice through the app or by email at least thirty days before the new terms take effect. Your continued use of miji after changes are posted constitutes acceptance. If you disagree with the updated terms, you may discontinue use and delete your account. These terms were last updated in March 2026. These terms are governed by the laws of the State of Delaware.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        &copy; 2026 CO3 ONE
+      </div>
+      <div class="footer-links">
+        <a href="#" data-page="privacy">privacy</a>
+        <a href="#" data-page="terms">terms</a>
+        <a href="mailto:founder@co3.one">contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/canvas.js"></script>
+</body>
+</html>
