@@ -1,7 +1,7 @@
 {
-  "name": "miji sees me.",
+  "name": "miji — see yourself clearly.",
   "short_name": "miji",
-  "description": "Check in with yourself in three seconds.",
+  "description": "Meet miji, the first emotional awareness companion.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#08080F",
