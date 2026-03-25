@@ -251,27 +251,27 @@
         const x3 = sw * (0.5 + Math.sin(t * 0.2 + 2) * 0.3);
         const y3 = sh * (0.5 + Math.cos(t * 0.15 + 1) * 0.3);
 
-        ctx.fillStyle = '#0a0c14';
+        ctx.fillStyle = '#08080F';
         ctx.fillRect(0, 0, sw, sh);
 
         const a1 = 0.28 + Math.sin(t * 0.5) * 0.08;
         const g1 = ctx.createRadialGradient(x1, y1, 0, x1, y1, sw * r1);
         g1.addColorStop(0, `rgba(${pal.c1[0]}, ${pal.c1[1]}, ${pal.c1[2]}, ${a1})`);
-        g1.addColorStop(1, 'rgba(10, 12, 20, 0)');
+        g1.addColorStop(1, 'rgba(8, 8, 15, 0)');
         ctx.fillStyle = g1;
         ctx.fillRect(0, 0, sw, sh);
 
         const a2 = 0.2 + Math.cos(t * 0.45) * 0.06;
         const g2 = ctx.createRadialGradient(x2, y2, 0, x2, y2, sw * r2);
         g2.addColorStop(0, `rgba(${pal.c2[0]}, ${pal.c2[1]}, ${pal.c2[2]}, ${a2})`);
-        g2.addColorStop(1, 'rgba(10, 12, 20, 0)');
+        g2.addColorStop(1, 'rgba(8, 8, 15, 0)');
         ctx.fillStyle = g2;
         ctx.fillRect(0, 0, sw, sh);
 
         const a3 = 0.12 + Math.sin(t * 0.6 + 3) * 0.04;
         const g3 = ctx.createRadialGradient(x3, y3, 0, x3, y3, sw * 0.5);
         g3.addColorStop(0, `rgba(${pal.c3[0]}, ${pal.c3[1]}, ${pal.c3[2]}, ${a3})`);
-        g3.addColorStop(1, 'rgba(10, 12, 20, 0)');
+        g3.addColorStop(1, 'rgba(8, 8, 15, 0)');
         ctx.fillStyle = g3;
         ctx.fillRect(0, 0, sw, sh);
 
