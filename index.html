@@ -189,7 +189,7 @@
 
         <h3 class="item-title">what it reads</h3>
         <p class="aside">
-          The perception engine continues to track forty-two facial landmarks across six primary expression zones. It measures both the static position of each feature and its rate of change over the reading window. Composite signals like tension gradients and bilateral symmetry are weighted into the final assessment. The system uses aggregate historical assessments to adapt to each user's sensitivity over time, accounting for natural resting expressions and individual variation. Every perception process runs through a lightweight on-device model with no cloud dependency.
+          The perception engine tracks four hundred sixty-eight facial landmarks across the full face mesh, mapping micro-movements, tension gradients, and bilateral symmetry in real time. It measures both the static position of each feature and its rate of change over the reading window. Composite signals like tension gradients and bilateral symmetry are weighted into the final assessment. The system uses aggregate historical assessments to adapt to each user's sensitivity over time, accounting for natural resting expressions and individual variation. Every perception process runs through a coordinated stack of on-device models with no cloud dependency.
         </p>
 
         <div class="divider"></div>
@@ -238,14 +238,14 @@
 
         <h3 class="item-title">how it's calculated</h3>
         <p class="aside">
-          Every day you get a single number measured entirely against your own life and history. No population benchmarks, no comparison, no ranking against anyone. miji generates a weighted composite of three distinct pillars: groundedness (how centered versus reactive you are today), connection quality (the strength of your social and emotional interactions), and trajectory (your directional trend over the past week). Each pillar pulls from different parts of the app, from face reads to journal sentiment to your interactions with miji. The weighting adjusts dynamically based on which data streams have the most signal on a given day. If you skip the journal for a week, your score might lean more heavily on face reads and interaction data. The system never penalizes missing inputs; however, both miji's scoring accuracy and interaction quality increase over consistent check-ins and journaling sessions with you.
+          Every day you get a single number measured entirely against your own life and history. No population benchmarks, no comparison, no ranking against anyone. miji generates a weighted composite of three distinct pillars: groundedness (how centered versus reactive you are today), connection quality (the strength of your social and emotional interactions), and trajectory (your directional trend over the past week). Each pillar pulls from different parts of the app, from face reads to journal sentiment to your interactions with miji. The composite is weighted across all three pillars, with groundedness and trajectory carrying slightly more influence than connection. If you skip the journal for a week, your score still draws from face reads and interaction data to stay current. The system never penalizes missing inputs; however, both miji's scoring accuracy and interaction quality increase over consistent check-ins and journaling sessions with you.
         </p>
 
         <div class="divider"></div>
 
         <h3 class="item-title">personal baseline</h3>
         <p class="aside">
-          The score is always relative to your historical range. A 72 for one person might represent a strong recovery week, while the same number for someone else might signal a slow decline. Your baseline recalibrates continuously over a rolling window of the last sixty days. Sudden life changes like a trip, an illness, or something unexpected are weighted differently to avoid distorting your trend score. The goal is a number that feels honest to your circumstances. miji is a personal reflection tool, a daily touchpoint and a long-term record, not a clinical measurement or a replacement for professional support.
+          The score is always relative to your historical range. A 72 for one person might represent a strong recovery week, while the same number for someone else might signal a slow decline. Your baseline recalibrates continuously over a rolling window of the last thirty days. The goal is a number that feels honest to your circumstances. miji is a personal reflection tool, a daily touchpoint and a long-term record, not a clinical measurement or a replacement for professional support.
         </p>
 
         <div class="divider"></div>
@@ -576,7 +576,7 @@
 
         <h3 class="item-title">data we collect</h3>
         <p class="aside">
-          When you use miji, the application processes facial expression data, voice input, and journal entries entirely on your device. None of this data is transmitted to our servers. We collect only the minimum information necessary to operate the service: your email address when you join the waitlist, anonymous usage analytics such as session frequency and feature engagement, and crash reports that contain no personal content. We do not collect or store biometric data, facial geometry, voice recordings, or journal text on any server.
+          When you use miji, the application processes facial expression data, voice input, and journal entries entirely on your device. None of this data is transmitted to our servers. We collect only the minimum information necessary to operate the service: your email address for account creation and waitlist registration. As we scale, we may introduce anonymous usage analytics and crash reporting, neither of which will contain personal content. We do not collect or store biometric data, facial geometry, voice recordings, or journal text on any server.
         </p>
 
         <div class="divider"></div>
